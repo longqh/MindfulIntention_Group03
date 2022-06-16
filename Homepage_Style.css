@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family:sans-serif;
+}
+.banner{
+    width: 100%;
+    height: 100vh;
+    background:  url(nature.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    
+}
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    align-items: center;
+    justify-content: space-between;
+    display: flex  ;
+
+}
+.logo{
+    width: 400px;
+    font-size: 55px;
+    color: rgb(35, 227, 96);
+    margin: 0 20px;
+    font-family:  'tahoma', sans-serif
+}
+.navbar ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 0 20px;
+    position: relative;
+}
+.navbar ul li a {
+    text-decoration: none;
+    color: antiquewhite;
+    font-size: 20px;
+    font-family: 'Didact Gothic',sans-serif ;
+}
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background:  rgb(35, 227, 96);
+    position: absolute;
+    bottom: -10px;
+    left: 0px;
+    transition: 0.5s;
+}
+.navbar ul li:hover::after{
+    width: 100%;
+
+}
+
+.content{
+    width: 100%;
+    position: absolute;
+    transform: translateY(-50%);
+    text-align: center;
+    top: 50%;
+    color: #fff;
+
+}
+.content h1{
+    font-size: 70px;
+    margin-top: 80px;
+}
+.content p{
+    margin: 10px auto;
+    font-size: 100;
+    line-height: 25px;
+}
+button{
+    margin: 20px 10px;
+    border-radius: 25px ;
+    padding: 15px 0;
+    width: 200px;
+    text-align: center;
+    border: 2px solid #fff ;
+    cursor: pointer;
+    font-weight: bold;
+    background: transparent;
+    color: aliceblue;
+    position: relative;
+    overflow: hidden;
+    
+}
+span{
+    width: 0;
+    height: 100%;
+    border-radius: 25px;
+    background: rgb(165, 173, 168);
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: -1;
+    transition: 0.5s;
+}
+button:hover span{
+    width: 100%;
+}
+button:hover{
+    border: none;
+}
+
+.navbar li{
+    position: relative;
+}
+.navbar li a{
+    color: black;
+    display: block;
+    left: 0;
+}
+.navbar ul.sub-menu{
+    position: absolute;
+    padding: 12px 0px;
+    list-style: none;
+    left: -15px;
+    display: none;
+}
+.navbar li:hover>ul.sub-menu{
+    display: block;
+}
+.navbar ul.sub-menu a{
+    padding: 8px 0;
+    
+}
+
+.last{
+    position: absolute;
+}
