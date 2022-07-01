@@ -1,14 +1,12 @@
-MindfulIntention_Group03
-Mindful Intention
-Supervisor : LÊ THANH NHÂN
-Semester : I
-Batch No : T1.2203.E1
-Group No: : 03
-List Of Member:
-Vũ Hải Anh (Student0000001)
-Quách Hoàng Long(Student0000002)
-Bùi Minh Chính (Student0000003)
-Thọ Chế Quốc Ân (Student0000004)
+Mindful Intention 
+Semester: 01
+Batch: T1.2203.E1
+Teacher: Le Thi Mong Thuy
+Student: 
+Vu Hai Anh 
+Quach Hoang Long 
+Mai Trieu Chinh 
+Tho Che Quoc An
 =======================================
 
 Documentations : https://github.com/ALCATEAM/MindfulIntention_Group03
