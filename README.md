@@ -1,8 +1,11 @@
+
 Mindful Intention 
+==================================
 Semester: 01
 Batch: T1.2203.E1
 Teacher: Le Thi Mong Thuy
-Student: 
+==================================
+Students: 
 Vu Hai Anh 
 Quach Hoang Long 
 Mai Trieu Chinh 
