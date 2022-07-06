@@ -1,0 +1,461 @@
+/*  Reset CSS to default    */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/*  Initilize body's font & color   */
+body {
+    font-family: "Open Sans", sans-serif;
+    color: #444444;
+}
+
+/*  Start of navbar */
+header {
+    position: sticky;  /*   navbar always on top of the website */
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    box-shadow: 0 0 18px rgba(55, 66, 59, 0.08);
+    padding: 5px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 999;
+}
+
+header .logo {
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 0 65px;
+    line-height: 80px;
+    letter-spacing: 1px;
+    font-family: "Poppins", sans-serif;
+    color: #579f66;
+}
+
+header .navbar ul {
+    list-style: none;
+}
+
+header .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+header .navbar ul li a {
+    text-decoration: none;
+    color: #579f66;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 0 30px;
+    display: block;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "Poppins", sans-serif;
+    white-space: nowrap;
+    transition: 0.3s; /*    slower the effect of hover  */
+}
+
+header .navbar ul li a i {
+    padding: 3px;
+}
+
+header .navbar ul li a:hover,
+header .navbar ul li a.active {
+    color: #cd7577;
+}
+
+header .navbar ul li ul {
+    position: absolute;
+    display: none; /*   disable submenu */
+    left: 0;
+    padding: 10px 0;
+    background: #fff;
+    box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+    transition: 0.3s; /*    slower the effect of hover  */
+    border-radius: 4px;
+}
+
+header .navbar ul li ul li {
+    width: 100%;
+    padding: 10px 0 5px 0;
+    text-align: left;
+    align-items: left;
+}
+
+header .navbar ul li:hover > ul,
+header .navbar ul li:focus > ul {
+    display: initial; /*    enable submenu when hover   */
+}
+
+#menu-bar {
+    display: none;
+}
+
+header label {
+    color: #37423b;
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    display: none;
+}
+
+/*Responsive navbar*/
+@media screen and (max-width: 1320px) {
+    header .logo {
+        margin: 0;
+    }
+
+    header label {
+        display: initial;
+    }
+
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #fff;
+        border-top: 1px solid #f9f9f9;
+        display: none;
+    }
+
+    header .navbar ul li {
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    header .navbar ul li ul {
+        position: relative;
+        width: 100%;
+    }
+
+    header .navbar ul li ul li {
+        width: 100%;
+        padding-left: 30px;
+        left: 0;
+    }
+
+    #menu-bar:checked ~ .navbar {
+        display: initial;
+    }
+}
+/*  End of navbar   */
+
+/*  Start of Images Slider  */
+.imageSlider {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.slider {
+    width: 100%;
+    height: 620px;
+    overflow: hidden;
+}
+
+.slides {
+    width: 500%;
+    height: 620px;
+    display: flex;
+}
+
+.slides input {
+    display: none;
+}
+
+.slide {
+    width: 20%;
+    transition: 2s;
+}
+
+/*  CSS for manual slide navigation */
+.navigation-manual {
+    position: absolute;
+    width: 100%;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn {
+    border: 2px solid #f9f9f9;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child){
+    margin-right: 40px;
+}
+
+.manual-btn:hover {
+    background: #cd7577;
+}
+
+#radio1:checked ~ .first {
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+    margin-left: -20%;
+}
+
+#radio3:checked ~ .first {
+    margin-left: -40%;
+}
+
+#radio4:checked ~ .first {
+    margin-left: -60%;
+}
+
+/*  CSS for automatic navigation    */
+.navigation-auto {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 580px;
+}
+
+.navigation-auto div {
+    border: 2px solid #f9f9f9;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.navigation-auto div:not(:last-child){
+    margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1 {
+    background: #f9f9f9;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2 {
+    background: #f9f9f9;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+    background: #f9f9f9;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4 {
+    background: #f9f9f9;
+}
+/*  End of Images Slider    */
+
+/*About Us start*/
+.about, .home-aerobic, .home-meditation {
+    padding: 150px 100px;
+}
+
+.row {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1em;
+    line-height: 30px;
+}
+
+.row .col {
+    position: relative;
+    width: 48%;
+}
+
+.titleText {
+    color: #111;
+    font-size: 2em;
+    font-weight: 400;
+    overflow: hidden;
+}
+
+.titleText span {
+    color: #5fcf80;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.row .col .imgBox {
+    position: relative;
+    width: 100%;
+    min-height: 300px;
+}
+
+.row .col .imgBox img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    object-fit: cover;
+}
+/*About Us end*/
+
+/*Contact Info start*/
+.contact {
+    padding: 100px 100px;
+}
+
+.contact .titleText {
+    text-align: center;
+}
+.contact .geolocation iframe{
+    width: 100%;
+}
+
+.contact .row .col h3 {
+    padding: 15px 0;
+}
+
+.contact .row .col p {
+    font-size: 15px;
+    line-height: 40px;
+}
+
+.col .form {
+    width: 660px;
+    padding: 20px 60px;
+}
+
+.col .form input{
+    width: 100%;
+    padding: 7px;
+    margin-bottom: 15px;
+    border: 1px solid #e9e7e7;
+    border-radius: 3px;
+}
+
+.col .form textarea {
+    width: 100%;
+    height: 150px;
+    padding: 7px;
+    margin-bottom: 10px;
+    border: 1px solid #e9e7e7;
+    border-radius: 3px;
+}
+
+.col .form button {
+    width: 100%;
+    padding: 7px;
+    color: #f9f9f9;
+    background-color: #5fcf80;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.col .form button:hover {
+    background: #39c262;
+}
+/*Contact Info end*/
+
+/*Read more button start*/
+.readmore-btn {
+    width: 120px;
+    padding: 7px;
+    margin-top: 20px;
+    background-color: #5fcf80;
+    text-align: center;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.readmore-btn a {
+    text-decoration: none;
+    color: white;
+}
+
+.readmore-btn:hover {
+    background: #cd7577;
+}
+/*Read more button end*/
+
+/*Back to top button start*/
+#back-to-top-btn {
+    display: none;
+    position: fixed; 
+    bottom: 20px; 
+    right: 20px; 
+    z-index: 99;
+    border: none; 
+    outline: none;
+    background-color: #5fcf80; 
+    color: white; 
+    cursor: pointer;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 20px;
+  }
+  
+  #back-to-top-btn:hover {
+    background-color: #39c262; /* Add a dark-grey background on hover */
+  }
+/*Back to top button end*/
+
+/*Aerobic's activity cards start*/
+.aerobic-cards {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 40px auto;
+    overflow: hidden;
+}
+
+.card {
+    max-width: 300px;
+    text-align: center;
+    margin-right: 60px;
+    padding: 30px;
+    font-size: 1em;
+    box-shadow: 0 0 18px rgba(55, 66, 59, 0.08);
+    overflow: hidden;
+}
+
+.card img {
+    width: 80%;
+    overflow: hidden;
+}
+
+.card p {
+    margin-top: 30px;
+    font-size: 1em;
+    line-height: 30px;
+    overflow: hidden;
+}
+
+.card .readmore-btn {
+    margin: auto;
+    overflow: hidden;
+}
+/*Aerobic's activity cards end*/
+
+/*  Start of Footer */
+footer {
+    background-color: #f9f9f9;
+    width: 100%;
+    height: 100px;
+    line-height: 30px;
+    font-size: 14px;
+    padding: 20px 50px;
+    position: relative;
+}
+
+footer span a {
+    font-family: "Poppins", sans-serif;
+    color: #5fcf80;
+    font-weight: bold;
+    text-decoration: none;
+}
+/*  End of Footer   */
+
+
